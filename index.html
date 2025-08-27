@@ -7,58 +7,86 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* text animation styles */
-    h2 > span {
-      position: relative;
-      display: inline-block;
-      color: red;             /* Animation text color */
-      vertical-align: bottom;
-      overflow: hidden;
-      height: 1.25em;         /* Height of one line */
-    }
 
-    h2 > span > span {
-      display: block;
-      animation: anim 5s infinite ease;
-    }
+  /* text animation styles */
+  h2 > span {
+    position: relative;
+    display: inline-block;
+    color: red;             /* Animation text color */
+    vertical-align: bottom;
+    overflow: hidden;
+    height: 1.25em;         /* Height of one line */
+  }
 
-    @keyframes anim {
-      0%   { transform: translateY(0%); }
-      25%  { transform: translateY(-100%); }
-      50%  { transform: translateY(-200%); }
-      75%  { transform: translateY(-300%); }
-      100% { transform: translateY(-400%); }
+  h2 > span > span {
+    display: block;
+    animation: anim 5s infinite ease;
+  }
+
+  @keyframes anim {
+    0%   { transform: translateY(0%); }
+    25%  { transform: translateY(-100%); }
+    50%  { transform: translateY(-200%); }
+    75%  { transform: translateY(-300%); }
+    100% { transform: translateY(-400%); }
+  }
+
+  /* Mobile header fixes */
+  @media (max-width: 768px) {
+    .navbar {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
+    .navbar-brand {
+      font-size: 1.25rem; /* smaller brand text */
+    }
+    .navbar-nav .nav-item {
+      margin: 5px 0; /* spacing between buttons */
+    }
+    .navbar-nav .btn {
+      width: 100%;   /* full-width buttons */
+      text-align: center;
+    }
+  }
+
+
+
+
   </style>
 </head>
 <body style="background-color: #EAEFEF;">
+<!----header------>
 
-<!---header------------>
-<!---header------------>
-<!---header------------>
-<header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom px-4 bg-light position-sticky top-0 shadow-sm" style="z-index: 1030;">
-  <!-- Name/Logo -->
-  <a href="/" class="d-flex align-items-center mb-2 mb-md-0 text-dark text-decoration-none">
-    <span class="fs-4 fw-bold">M.Sri Nidhi</span>
-  </a>
+<header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container-fluid px-4">
+    <!-- Logo/Name -->
+    <a href="/" class="navbar-brand fw-bold fs-4">M.Sri Nidhi</a>
 
-  <!-- Navigation -->
-  <ul class="nav">
-    <li class="nav-item">
-      <a href="https://www.linkedin.com/in/m-sri-nidhi-45b000278/" 
-         class="btn btn-primary rounded-pill mx-2 px-4">LinkedIn</a>
-    </li>
-    <li class="nav-item">
-      <a href="https://github.com/srinidhxi" 
-         class="btn btn-dark rounded-pill mx-2 px-4">GitHub</a>
-    </li>
-    <li class="nav-item">
-      <a href="./email.html" 
-         class="btn btn-danger rounded-pill mx-2 px-4">Contact</a>
-    </li>
-  </ul>
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible nav items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav flex-column flex-lg-row">
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="https://www.linkedin.com/in/m-sri-nidhi-45b000278/"
+             class="btn btn-primary rounded-pill px-4 w-100 w-lg-auto">LinkedIn</a>
+        </li>
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="https://github.com/srinidhxi"
+             class="btn btn-dark rounded-pill px-4 w-100 w-lg-auto">GitHub</a>
+        </li>
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="./email.html"
+             class="btn btn-danger rounded-pill px-4 w-100 w-lg-auto">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
-
 
 
 <!----Hero----------->
