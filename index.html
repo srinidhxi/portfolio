@@ -3,62 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
-
-  <!-- Bootstrap CSS -->
+  <title>Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Your custom CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* text animation styles */
+    h2 > span {
+      position: relative;
+      display: inline-block;
+      color: red;             /* Animation text color */
+      vertical-align: bottom;
+      overflow: hidden;
+      height: 1.25em;         /* Height of one line */
+    }
+
+    h2 > span > span {
+      display: block;
+      animation: anim 5s infinite ease;
+    }
+
+    @keyframes anim {
+      0%   { transform: translateY(0%); }
+      25%  { transform: translateY(-100%); }
+      50%  { transform: translateY(-200%); }
+      75%  { transform: translateY(-300%); }
+      100% { transform: translateY(-400%); }
+    }
+  </style>
 </head>
 <body style="background-color: #EAEFEF;">
 
 <!---header------------>
+<!---header------------>
+<!---header------------>
+<header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom px-4 bg-light position-sticky top-0 shadow-sm" style="z-index: 1030;">
+  <!-- Name/Logo -->
+  <a href="/" class="d-flex align-items-center mb-2 mb-md-0 text-dark text-decoration-none">
+    <span class="fs-4 fw-bold">M.Sri Nidhi</span>
+  </a>
 
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
-        <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-            <use xlink:href="#bootstrap"></use>
-        </svg> <span class="fs-4" style="font-weight: 600; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">M.Sri Nidhi</span>
-     </a> <ul class="nav nav-pills" style=" margin-right: 20px;">
-        
-        </li> 
-        <li class="nav-item">
-            <a href="https://www.linkedin.com/in/m-sri-nidhi-45b000278/" class="nav-link active"
-            style="margin-right: 20px;"
-            >Linkedin</a>
-        </li> <li class="nav-item">
-            <a href="https://github.com/srinidhxi" class="nav-link active" style="background-color: black; margin-right: 20px;">Github</a>
-        
-        <li class="nav-item">
-            <a href="./email.html" class="nav-link active" aria-current="page"
-             style="background-color: orangered;
-           margin-right: 20px;
-             ">contact</a>
-        </li>
-     </ul>
-     </header>
+  <!-- Navigation -->
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="https://www.linkedin.com/in/m-sri-nidhi-45b000278/" 
+         class="btn btn-primary rounded-pill mx-2 px-4">LinkedIn</a>
+    </li>
+    <li class="nav-item">
+      <a href="https://github.com/srinidhxi" 
+         class="btn btn-dark rounded-pill mx-2 px-4">GitHub</a>
+    </li>
+    <li class="nav-item">
+      <a href="./email.html" 
+         class="btn btn-danger rounded-pill mx-2 px-4">Contact</a>
+    </li>
+  </ul>
+</header>
+
+
 
 <!----Hero----------->
-
 <div class="container col-xxl-8 px-4 py-5">
      <div class="row flex-lg-row-reverse align-items-center g-5 py-5"> 
         <div class="col-10 col-sm-8 col-lg-6">
              <img src="./images/Fullstack.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
-            </div> 
-            <div class="col-lg-6">
-                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">I am</h1>
-                  <p class="lead">I’m a self-motivated and detail-oriented Full-Stack Developer passionate about turning ideas into scalable, user-centric applications. With strong expertise across both front-end and back-end technologies, I enjoy building responsive, high-performing solutions that deliver seamless user experiences. I thrive on solving complex problems, optimizing performance, and contributing to innovative projects while constantly expanding my technical expertise.
-</p> 
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-
-                    </div> 
-                </div>
-             </div> 
-            </div>
+        </div> 
+        <div class="col-lg-6">
+            <!-- replaced static heading with animated text -->
+            <h2 style="color:black; font-weight:bold;">
+              I'm a
+              <span>
+                <span>Coder</span>
+                <span>Programmer</span>
+                <span>Developer</span>
+                <span>Designer</span>
+              </span>
+            </h2>
+            <p class="lead mt-3">
+              I’m a self-motivated and detail-oriented Full-Stack Developer passionate about turning ideas into scalable, user-centric applications. With strong expertise across both front-end and back-end technologies, I enjoy building responsive, high-performing solutions that deliver seamless user experiences. I thrive on solving complex problems, optimizing performance, and contributing to innovative projects while constantly expanding my technical expertise.
+            </p> 
+        </div>
+     </div> 
+</div>
 
 <!-------Skills-->
-<div class="container my-5"> <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+<div class="container my-5"> 
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3"> 
         <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Skills</h1>
          <p class="lead"><span style="font-weight: 600; display: block;">Front-end</span>
@@ -66,96 +95,74 @@ HTML5, CSS3, JavaScript (ES6+)
 Responsive Design, Tailwind CSS / Bootstrap</p>
 
  <p class="lead"><span style="font-weight: 600; display: block;">Tools</span>
-
-
 Git, GitHub and VS Code</p>
 
  <p class="lead"><span style="font-weight: 600; display: block;">Others</span>
-
-
 Python,Anaconda Navigator, Java-Basic</p>
 
-
-<p class="lead"><span style="font-weight: 600; display: block;">Strong Collaboration and Communication
-</span>
-</p>
-
-
-
-                 
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"> 
-         </div> 
-        </div> 
-         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                 <img class="rounded-lg-3" src="./images/skills.jpeg" alt="" width="720">
-             </div> 
-        </div> 
-        </div>
+<p class="lead"><span style="font-weight: 600; display: block;">Strong Collaboration and Communication</span></p>
+     </div> 
+     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3" src="./images/skills.jpeg" alt="" width="720">
+     </div> 
+  </div> 
+</div>
 
 <!-----Experience-->
-        <div class="container col-xxl-8 px-4 py-5">
-             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                 <div class="col-10 col-sm-8 col-lg-6"> 
-                    <img src="./images/profexp.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
-                </div>
-                 <div class="col-lg-6"> 
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Professional Experience</h1>
-                     <p class="lead"> <span style="font-weight: 600; font-size: 30px;">
-                        Junior Full Stack Developer
-                     </span> 
-                     <span style="font-weight: 600; display: block;">
-                        Credencer Technologies
-                     </span> 
+<div class="container col-xxl-8 px-4 py-5">
+     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+         <div class="col-10 col-sm-8 col-lg-6"> 
+            <img src="./images/profexp.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
+        </div>
+         <div class="col-lg-6"> 
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Professional Experience</h1>
+             <p class="lead"> <span style="font-weight: 600; font-size: 30px;">
+                Junior Full Stack Developer
+             </span> 
+             <span style="font-weight: 600; display: block;">
+                Credencer Technologies
+             </span> 
 
 Frontend Development – Building responsive and user friendly interfaces using HTML,
 CSS, JavaScript, and frameworks like Bootstrap.
 Version Control & Collaboration – Using Git/GitHub for code management and
 collaborating with the development team.
-Database Management Working with MySQL, MongoDB, for data storage, retrieval, and
+Database Management – Working with MySQL, MongoDB, for data storage, retrieval, and
 optimization</p> 
-                     <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
-                    </div>
-                 </div> 
-                </div>
-             </div>
+        </div> 
+    </div>
+</div>
 
 <!----Projects-->
-        <div class="container col-xxl-8 px-4 py-5">
-             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                 <div class="col-10 col-sm-8 col-lg-6"> 
-                    <img src="./images/Lib.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
-                </div>
-                 <div class="col-lg-6"> 
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Projects</h1>
-                     <p class="lead"> <span style="font-weight: 600; font-size: 30px; display: block;">
-Library Management System
-                     </span> 
-HTML,CSS, JavaScript, and Bootstrap framework. Implemented backend logic in Python for book search,
-issue/return tracking, and role-based access control. Designed optimized relational schemas in MySQL with
-indexing and normalization for efficient data handling. Integrated Firebase Authentication and cloud backup
-for secure login and scalability. Gained hands-on experience in full-stack development, database optimization,
-and cloud integration.</p> 
-                     <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
-                    </div>
-                 </div> 
-                </div>
-            </div>
-
+<div class="container col-xxl-8 px-4 py-5">
+     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+         <div class="col-10 col-sm-8 col-lg-6"> 
+            <img src="./images/Lib.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
+        </div>
+         <div class="col-lg-6"> 
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Projects</h1>
+             <p class="lead"> 
+              <span style="font-weight: 600; font-size: 30px; display: block;">
+                Library Management System
+              </span> 
+              HTML, CSS, JavaScript, and Bootstrap framework. Implemented backend logic in Python for book search,
+              issue/return tracking, and role-based access control. Designed optimized relational schemas in MySQL with
+              indexing and normalization for efficient data handling. Integrated Firebase Authentication and cloud backup
+              for secure login and scalability. Gained hands-on experience in full-stack development, database optimization,
+              and cloud integration.
+             </p> 
+        </div> 
+    </div>
+</div>
 
 <!------footer-->
 <footer class="py-3 my-4"> 
     <ul class="nav justify-content-center border-bottom pb-3 mb-3"> 
-        
-         
-        <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">About</a>
-        </li>
-     </ul>
-      <p class="text-center text-body-secondary">ThankYou</p> 
-    </footer>
-</body>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">ThankYou</p> 
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+</body>
 </html>
-
