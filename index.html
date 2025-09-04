@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* text animation styles */
+h2 > span {
+    position: relative;
+    display: inline-block;
+    color: red;             /* Animation text color */
+    vertical-align: bottom;
+    overflow: hidden;
+    height: 1.25em;         /* Height of one line */
+  }
+
+  h2 > span > span {
+    display: block;
+    animation: anim 5s infinite ease;
+  }
+
+  @keyframes anim {
+    0%   { transform: translateY(0%); }
+    25%  { transform: translateY(-100%); }
+    50%  { transform: translateY(-200%); }
+    75%  { transform: translateY(-300%); }
+    100% { transform: translateY(-400%); }
+  }
+
+  /* Mobile header fixes */
+  @media (max-width: 768px) {
+    .navbar {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .navbar-brand {
+      font-size: 1.25rem; /* smaller brand text */
+    }
+    .navbar-nav .nav-item {
+      margin: 5px 0; /* spacing between buttons */
+    }
+    .navbar-nav .btn {
+      width: 100%;   /* full-width buttons */
+      text-align: center;
+    }
+  }
+  </style>
+</head>
+<body style="background-color: #EAEFEF;">
+
+<!----header------>
+<header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container-fluid px-4">
+    <a href="#home" class="navbar-brand fw-bold fs-4">M.Sri Nidhi</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav flex-column flex-lg-row">
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="#skills" class="btn btn-outline-primary rounded-pill px-4 w-100 w-lg-auto">Skills</a>
+        </li>
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="#experience" class="btn btn-outline-success rounded-pill px-4 w-100 w-lg-auto">Experience</a>
+        </li>
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="#projects" class="btn btn-outline-dark rounded-pill px-4 w-100 w-lg-auto">Projects</a>
+        </li>
+        <li class="nav-item my-2 my-lg-0 mx-lg-2">
+          <a href="./email.html" class="btn btn-outline-danger rounded-pill px-4 w-100 w-lg-auto">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!----Hero----------->
+<div id="home" class="container col-xxl-8 px-4 py-5">
+     <div class="row flex-lg-row-reverse align-items-center g-5 py-5"> 
+        <div class="col-10 col-sm-8 col-lg-6">
+             <img src="./images/Fullstack.jpeg" class="d-block mx-lg-auto img-fluid" alt="Fullstack Developer" width="700" height="500" loading="lazy"> 
+        </div> 
+        <div class="col-lg-6">
+            <h2 style="color:black; font-weight:bold;">
+              I'm a
+              <span>
+                <span>Coder</span>
+                <span>Programmer</span>
+                <span>Developer</span>
+                <span>Designer</span>
+                <span>Coder</span> <!-- duplicate for smooth loop -->
+              </span>
+            </h2>
+            <p class="lead mt-3">
+              Self-motivated and detail-oriented Full-Stack Developer passionate about turning ideas into scalable, user-centric applications. With strong expertise across both front-end and back-end technologies, I enjoy building responsive, high-performing solutions that deliver seamless user experiences. I thrive on solving complex problems, optimizing performance, and contributing to innovative projects while constantly expanding my technical expertise.
+        </div>
+     </div> 
+</div>
+
+<!-------Skills-->
+<!-------Skills-->
+<div id="skills" class="container col-xxl-8 px-4 py-5">
+  <h1 class="display-5 fw-bold text-center mb-5">Skills</h1>
+  <div class="row g-4">
+    
+    <!-- Frontend -->
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <img src="https://img.icons8.com/color/96/html-5.png" alt="Frontend" class="mx-auto" />
+        <h5 class="mt-3 fw-bold">Frontend</h5>
+        <p>HTML5, CSS3, JavaScript (ES6+), Responsive Design, Bootstrap, DOM Manipulation</p>
+      </div>
+    </div>
+    
+    <!-- Backend -->
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <img src="https://img.icons8.com/color/96/python.png" alt="Backend" class="mx-auto" />
+        <h5 class="mt-3 fw-bold">Backend</h5>
+        <p>Python, Java, JavaScript</p>
+      </div>
+    </div>
+    
+    <!-- Database -->
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <img src="https://img.icons8.com/color/96/database.png" alt="Database" class="mx-auto" />
+        <h5 class="mt-3 fw-bold">Database</h5>
+        <p>MySQL</p>
+      </div>
+    </div>
+    
+    <!-- Tools -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <img src="https://img.icons8.com/color/96/github.png" alt="Tools" class="mx-auto" />
+        <h5 class="mt-3 fw-bold">Tools</h5>
+        <p>Git, GitHub, VS Code, Anaconda</p>
+      </div>
+    </div>
+    
+    <!-- Other -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="Other" class="mx-auto" />
+        <h5 class="mt-3 fw-bold">Other</h5>
+        <p>OOPs (Object-Oriented Programming System)</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-----Experience-->
+<div id="experience" class="container col-xxl-8 px-4 py-5">
+     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+         <div class="col-10 col-sm-8 col-lg-6"> 
+            <img src="./images/profexp.png" class="d-block mx-lg-auto img-fluid" alt="Professional Experience" width="700" height="500" loading="lazy"> 
+        </div>
+         <div class="col-lg-6"> 
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Professional Experience</h1>
+             <p class="lead"> <span style="font-weight: 600; font-size: 30px;">
+                Junior Full Stack Developer
+             </span> 
+             <span style="font-weight: 600; display: block;">
+                Credencer Technologies
+             </span> 
+Frontend Development – Building responsive and user friendly interfaces using HTML, CSS, JavaScript, and frameworks like Bootstrap. Version Control & Collaboration – Using Git/GitHub for code management and collaborating with the development team. Database Management – Working with MySQL, MongoDB, for data storage, retrieval, and optimization
+             </p> 
+        </div> 
+    </div>
+</div>
+
+<!----Projects-->
+<div id="projects" class="container col-xxl-8 px-4 py-5">
+     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+         <div class="col-10 col-sm-8 col-lg-6"> 
+            <img src="./images/Lib.jpeg" class="d-block mx-lg-auto img-fluid" alt="Library Management System" width="700" height="500" loading="lazy"> 
+        </div>
+         <div class="col-lg-6"> 
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Projects</h1>
+             <p class="lead"> 
+              <span style="font-weight: 600; font-size: 30px; display: block;">
+                Library Management System
+              </span> 
+HTML, CSS, JavaScript, and Bootstrap framework. Implemented backend logic in Python for book search, issue/return tracking, and role-based access control. Designed optimized relational schemas in MySQL with indexing and normalization for efficient data handling. Integrated Firebase Authentication and cloud backup for secure login and scalability. Gained hands-on experience in full-stack development, database optimization, and cloud integration.
+             </p> 
+        </div> 
+    </div>
+</div>
+
+<!------footer / contact-->
+<footer id="contact" class="py-3 my-4"> 
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3"> 
+        <li class="nav-item"><a href="#home" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link px-2 text-body-secondary">Skills</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link px-2 text-body-secondary">Experience</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link px-2 text-body-secondary">Projects</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">Thank You</p> 
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
