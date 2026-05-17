@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Frontend Development",
+    icon: Globe,
     skills: [
       "HTML5",
       "CSS3",
@@ -25,6 +26,7 @@ const skillCategories = [
 
   {
     title: "Programming & Data Analytics",
+    icon: BarChart3,
     skills: [
       "Python",
       "NumPy",
@@ -38,6 +40,7 @@ const skillCategories = [
 
   {
     title: "Database & Backend Concepts",
+    icon: Database,
     skills: [
       "MySQL",
       "REST APIs",
@@ -49,6 +52,7 @@ const skillCategories = [
 
   {
     title: "Tools & Platforms",
+    icon: Wrench,
     skills: [
       "GitHub",
       "VS Code",
