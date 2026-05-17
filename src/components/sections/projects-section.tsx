@@ -27,8 +27,8 @@ const projects = [
     description:
       "Performed exploratory data analysis on Netflix movies and TV shows dataset using Python, Seaborn, and Matplotlib to study trends, ratings, and content distribution.",
     tech: ["Python", "Pandas", "Seaborn", "Matplotlib"],
-    live: "#",
-    github: "#",
+    live: "",
+    github: "https://github.com/srinidhxi/Netflix-Data-Analysis",
   },
 
   {
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Built a music analytics dashboard using Python and Pandas to analyze genre distribution, artist popularity, and streaming trends through visualizations.",
     tech: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
-    live: "https://github.com/srinidhxi/spotify-music-analytics-dashboard",
+    live: "",
     github: "https://github.com/srinidhxi/spotify-music-analytics-dashboard",
   },
 ];
@@ -104,15 +104,19 @@ export default function ProjectsSection() {
               {/* Buttons */}
               <div className="flex items-center gap-4">
 
-                <a
-                  href={project.live}
-                  target="_blank"
-                  className="flex items-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-500"
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
+                {/* Live Demo (ONLY if exists) */}
+                {project.live && project.live !== "" && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    className="flex items-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-500"
+                  >
+                    <ExternalLink size={16} />
+                    Live Demo
+                  </a>
+                )}
 
+                {/* GitHub */}
                 <a
                   href={project.github}
                   target="_blank"
