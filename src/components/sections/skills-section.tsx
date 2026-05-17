@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Frontend Development",
-    icon: Globe,
     skills: [
       "HTML5",
       "CSS3",
@@ -23,45 +22,40 @@ const skillCategories = [
       "Tailwind CSS",
     ],
   },
+
   {
     title: "Programming & Data Analytics",
-    icon: BarChart3,
     skills: [
       "Python",
       "NumPy",
       "Pandas",
       "Matplotlib",
-      "Excel",
+      "Seaborn",
       "Data Analysis",
-      "Data Manipulation",
+      "Data Visualization",
     ],
   },
+
   {
-    title: "Database & Core Concepts",
-    icon: Database,
+    title: "Database & Backend Concepts",
     skills: [
       "MySQL",
+      "REST APIs",
       "OOPS",
       "DBMS",
       "SDLC",
-      "REST APIs",
-      "Problem Solving",
-      "Debugging",
-      "Team Collaboration",
     ],
   },
+
   {
     title: "Tools & Platforms",
-    icon: Wrench,
     skills: [
-      "VS Code",
       "GitHub",
+      "VS Code",
       "Vercel",
-      "Anaconda Navigator",
+      "Anaconda",
       "Power BI",
       "Canva",
-      "PowerPoint",
-      "Word",
       "ChatGPT",
       "Claude AI",
     ],

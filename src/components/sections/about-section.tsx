@@ -10,7 +10,7 @@ export default function AboutSection() {
     >
       <div className="mx-auto max-w-6xl">
 
-        {/* Section Heading */}
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,13 +43,10 @@ export default function AboutSection() {
             </h3>
 
             <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-              I’m M. Sri Nidhi, a self-taught Frontend Developer
-              and Data Analyst passionate about building modern,
-              responsive, and user-focused digital experiences.
-
-              I enjoy transforming ideas into visually polished
-              interfaces while combining analytical thinking
-              to solve real-world problems through technology.
+              CSE-Data Science student graduating in 2026 with strong interest in
+              data analytics, frontend development, and UI/UX design. I enjoy
+              building modern, responsive web applications and turning ideas into
+              real-world digital products.
             </p>
           </motion.div>
 
@@ -66,14 +63,9 @@ export default function AboutSection() {
             </h3>
 
             <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-              From developing full-stack internship projects
-              to redesigning modern SaaS interfaces and
-              exploring machine learning and analytics,
-              I continuously strive to improve my technical
-              and creative skills.
-
-              I’m focused on building industry-ready solutions
-              with clean UI/UX and scalable development practices.
+              I have worked on full-stack internship projects, frontend redesigns,
+              and data analytics dashboards using Python and modern web technologies.
+              I continuously improve my skills through real-world projects and hands-on learning.
             </p>
           </motion.div>
 

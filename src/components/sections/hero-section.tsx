@@ -49,7 +49,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2 }}
           className="mb-6 text-sm uppercase tracking-[0.4em] text-blue-500 dark:text-blue-400"
         >
-          Frontend Developer • Data Analyst
+          Frontend Developer • Data Analyst • CSE (Data Science)
         </motion.p>
 
         {/* Heading */}
@@ -72,9 +72,7 @@ export default function HeroSection() {
           transition={{ delay: 0.5 }}
           className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-700 dark:text-gray-300 md:text-xl"
         >
-          Self-taught Frontend Developer and Data Analyst
-          passionate about crafting responsive interfaces,
-          smart analytics solutions, and modern user experiences.
+          Self-taught Frontend Developer and Data Analyst, currently pursuing B.Tech in CSE (Data Science). Passionate about building modern web applications, data-driven insights, and clean UI/UX experiences.
         </motion.p>
 
         {/* Buttons */}

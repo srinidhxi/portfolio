@@ -5,37 +5,39 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Globopersona Frontend Redesign",
+    title: "Globopersona SaaS Dashboard Redesign",
     description:
-      "Modern SaaS-style frontend redesign built using Next.js, TypeScript, and Tailwind CSS with responsive dashboards, analytics, authentication flows, and dark/light mode support.",
+      "Modern SaaS frontend redesign built using Next.js, TypeScript, and Tailwind CSS featuring responsive dashboards, authentication UI, analytics views, and dark/light mode support.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     live: "https://globopersona-redesign-six.vercel.app/settings",
     github: "https://github.com/srinidhxi/Globopersona-Redesign",
   },
+
   {
-    title: "Brain Tumor Detection Using ML",
+    title: "Portfolio Website (Personal Project)",
     description:
-      "Developed a CNN-based machine learning model for MRI image classification with 88% accuracy using Python and deep learning workflows.",
-    tech: ["Python", "CNN", "Machine Learning", "Data Processing"],
+      "Modern personal portfolio built using Next.js and Tailwind CSS featuring responsive UI, dark/light mode, smooth animations, project showcase, and a fully working EmailJS contact form.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    live: "https://portfolio-tawny-five-33.vercel.app",
+    github: "https://github.com/srinidhxi/portfolio",
+  },
+
+  {
+    title: "Netflix Data Analysis (Seaborn EDA)",
+    description:
+      "Performed exploratory data analysis on Netflix movies and TV shows dataset using Python, Seaborn, and Matplotlib to study trends, ratings, and content distribution.",
+    tech: ["Python", "Pandas", "Seaborn", "Matplotlib"],
     live: "#",
     github: "#",
   },
+
   {
-    title: "Weather Data Analysis",
+    title: "Spotify Music Analytics Dashboard",
     description:
-      "Performed exploratory data analysis on weather datasets using Pandas and Python to extract insights on temperature, humidity, and weather conditions.",
-    tech: ["Python", "Pandas", "Matplotlib", "EDA"],
-    live: "#",
-    github:
-      "https://github.com/srinidhxi/Data-Analysis-Project-With-Pandas",
-  },
-  {
-    title: "Library Management System",
-    description:
-      "Full-stack web application with role-based access, issue/return tracking, and database optimization developed during internship experience.",
-    tech: ["Python", "MySQL", "JavaScript", "Bootstrap"],
-    live: "#",
-    github: "#",
+      "Built a music analytics dashboard using Python and Pandas to analyze genre distribution, artist popularity, and streaming trends through visualizations.",
+    tech: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+    live: "https://github.com/srinidhxi/spotify-music-analytics-dashboard",
+    github: "https://github.com/srinidhxi/spotify-music-analytics-dashboard",
   },
 ];
 
