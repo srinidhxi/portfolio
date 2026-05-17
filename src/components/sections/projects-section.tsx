@@ -22,14 +22,14 @@ const projects = [
     github: "https://github.com/srinidhxi/portfolio",
   },
 
-  {
-    title: "Netflix Data Analysis (Seaborn EDA)",
-    description:
-      "Performed exploratory data analysis on Netflix movies and TV shows dataset using Python, Seaborn, and Matplotlib to study trends, ratings, and content distribution.",
-    tech: ["Python", "Pandas", "Seaborn", "Matplotlib"],
-    live: "",
-    github: "https://github.com/srinidhxi/Netflix-Data-Analysis",
-  },
+ {
+  title: "Netflix Data Analysis (Seaborn EDA)",
+  description:
+    "Performed exploratory data analysis on Netflix movies and TV shows dataset using Python, Seaborn, and Matplotlib to study trends, ratings, and content distribution.",
+  tech: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+  live: "",
+  github: "https://github.com/srinidhxi/netflix-seaborn-analysis",
+},
 
   {
     title: "Spotify Music Analytics Dashboard",
