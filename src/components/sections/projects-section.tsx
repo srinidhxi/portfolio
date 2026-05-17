@@ -11,6 +11,7 @@ const projects = [
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     live: "https://globopersona-redesign-six.vercel.app/settings",
     github: "https://github.com/srinidhxi/Globopersona-Redesign",
+    featured: true,
   },
 
   {
@@ -20,16 +21,17 @@ const projects = [
     tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "EmailJS"],
     live: "https://portfolio-tawny-five-33.vercel.app",
     github: "https://github.com/srinidhxi/portfolio",
+    featured: true,
   },
 
- {
-  title: "Netflix Data Analysis (Seaborn EDA)",
-  description:
-    "Performed exploratory data analysis on Netflix movies and TV shows dataset using Python, Seaborn, and Matplotlib to study trends, ratings, and content distribution.",
-  tech: ["Python", "Pandas", "Seaborn", "Matplotlib"],
-  live: "",
-  github: "https://github.com/srinidhxi/netflix-seaborn-analysis",
-},
+  {
+    title: "Netflix Data Analysis (Seaborn EDA)",
+    description:
+      "Performed exploratory data analysis on Netflix movies and TV shows dataset using Python, Seaborn, and Matplotlib to study trends, ratings, and content distribution.",
+    tech: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+    live: "",
+    github: "https://github.com/srinidhxi/netflix-seaborn-analysis",
+  },
 
   {
     title: "Spotify Music Analytics Dashboard",
@@ -45,7 +47,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative bg-gray-50 px-6 py-32 transition-colors duration-500 dark:bg-[#030712]"
+      className="relative bg-gray-50 px-6 py-28 md:py-32 transition-colors duration-500 dark:bg-[#030712]"
     >
       <div className="mx-auto max-w-6xl">
 
@@ -66,7 +68,7 @@ export default function ProjectsSection() {
           </h2>
         </motion.div>
 
-        {/* Project Grid */}
+        {/* Grid */}
         <div className="grid gap-8 md:grid-cols-2">
 
           {projects.map((project, index) => (
@@ -79,8 +81,16 @@ export default function ProjectsSection() {
                 delay: index * 0.1,
               }}
               viewport={{ once: true }}
-              className="group rounded-3xl border border-black/10 bg-white/70 p-8 shadow-md backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-white/10 dark:bg-white/5 dark:hover:border-blue-500/30"
+              className="group rounded-3xl border border-black/10 bg-white/70 p-8 shadow-md backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:border-white/10 dark:bg-white/5 dark:hover:border-blue-500/30"
             >
+
+              {/* Featured Badge */}
+              {project.featured && (
+                <span className="mb-4 inline-block rounded-full bg-blue-500/10 px-3 py-1 text-xs text-blue-500 dark:text-blue-400">
+                  Featured Project
+                </span>
+              )}
+
               <h3 className="mb-4 text-2xl font-semibold text-black dark:text-white">
                 {project.title}
               </h3>
@@ -104,12 +114,12 @@ export default function ProjectsSection() {
               {/* Buttons */}
               <div className="flex items-center gap-4">
 
-                {/* Live Demo (ONLY if exists) */}
-                {project.live && project.live !== "" && (
+                {/* Live Demo */}
+                {project.live && project.live.trim() !== "" && (
                   <a
                     href={project.live}
                     target="_blank"
-                    className="flex items-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-500"
+                    className="flex items-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-blue-500"
                   >
                     <ExternalLink size={16} />
                     Live Demo
@@ -117,13 +127,15 @@ export default function ProjectsSection() {
                 )}
 
                 {/* GitHub */}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className="rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-gray-100 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
-                >
-                  GitHub
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium text-black transition-all duration-300 hover:scale-105 hover:bg-gray-100 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+                  >
+                    GitHub
+                  </a>
+                )}
 
               </div>
             </motion.div>
